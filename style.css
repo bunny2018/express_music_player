@@ -1,0 +1,10 @@
+:root{--pink:#ff0088;--bg:#050505;--card:#121018;--line:#2b2632;--text:#f5f5f7;--muted:#aaa6b2}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+.container{max-width:850px;margin:auto;padding:24px 18px 60px}
+header{background:linear-gradient(135deg,#ff0088,#b0005f);padding:34px 22px;border-radius:0 0 28px 28px}
+.logo{width:58px;height:58px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#b0005f;font-size:30px;font-weight:900}
+h1{font-size:30px;margin:18px 0 4px}.subtitle{margin:0;color:#ffe5f3}
+nav{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}nav a{color:#fff;text-decoration:none;border:1px solid #3b3440;background:var(--card);padding:9px 13px;border-radius:999px}
+nav a:hover{border-color:var(--pink);color:var(--pink)}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:16px 0}
+h2{color:var(--pink);font-size:21px;margin-top:0}.note{color:var(--muted)}a{color:#ff4eae}.footer{margin-top:35px;text-align:center;color:var(--muted);font-size:14px}
+ul{padding-left:22px}.badge{display:inline-block;color:#fff;background:#b0005f;padding:7px 13px;border-radius:20px;text-decoration:none}
