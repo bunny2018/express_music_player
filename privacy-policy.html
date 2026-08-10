@@ -1,9 +1,733 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy - Express Music Player</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="logo">🔒</div><h1>Privacy Policy</h1><p class="subtitle">Express Music Player</p></header>
-<div class="container"><nav><a href="index.html">Home</a><a href="faq.html">FAQ</a><a href="feedback.html">Feedback</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
-<div class="card"><p><strong>Effective date:</strong> 10 August 2026</p><p>Express Music Player is designed as an offline music player. We do not require an account to use the app's core offline features.</p></div>
-<div class="card"><h2>Information We Collect</h2><p>The app is designed not to collect or transmit personal information to our servers as part of its core offline functionality.</p><p>The app may access audio/media files on your device when you grant the relevant permission. These files are used locally for features such as playback and music management.</p></div>
-<div class="card"><h2>Data Sharing</h2><p>We do not sell or share your personal information with third parties through the app's core offline functionality.</p></div>
-<div class="card"><h2>Permissions</h2><p>Media/audio access may be required so the app can find and play music stored on your device. Permissions are used only for the corresponding app functionality.</p></div>
-<div class="card"><h2>Changes to This Policy</h2><p>This Privacy Policy may be updated when the app's features or data practices change. The latest version will be published on this page.</p></div>
-<div class="card"><h2>Contact</h2><p>For privacy questions, please use the developer contact provided on the Feedback page.</p></div><div class="footer">© 2026 Express Music Player. All Rights Reserved.</div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Privacy Policy for Express Music Player">
+<title>Privacy Policy — Express Music Player</title>
+
+<style>
+:root{
+    --bg:#050505;
+    --surface:#0f0a10;
+    --surface-2:#151016;
+    --border:#32152c;
+    --pink:#ff0080;
+    --pink-light:#ff4cab;
+    --pink-dark:#c90066;
+    --text:#f8f5f8;
+    --muted:#aaa4ad;
+    --soft:#ded8df;
+}
+
+*{box-sizing:border-box}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:
+        radial-gradient(circle at 50% -10%,rgba(255,0,128,.13),transparent 38%),
+        var(--bg);
+    color:var(--text);
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.75;
+}
+
+/* ---------- TOP HEADER ---------- */
+
+.hero{
+    background:linear-gradient(115deg,#ff0080 0%,#ed0076 48%,#c40062 100%);
+    border-radius:0 0 30px 30px;
+    box-shadow:0 10px 40px rgba(255,0,128,.12);
+}
+
+.hero-inner{
+    max-width:1180px;
+    margin:auto;
+    min-height:230px;
+    padding:38px 42px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.hero h1{
+    margin:0 0 8px;
+    font-size:clamp(38px,6vw,64px);
+    line-height:1.08;
+    letter-spacing:-1.4px;
+}
+
+.hero p{
+    margin:0;
+    font-size:20px;
+    font-weight:500;
+}
+
+.app-icon{
+    width:125px;
+    height:125px;
+    flex:0 0 125px;
+    background:#fff;
+    border-radius:28px;
+    padding:10px;
+    box-shadow:0 12px 35px rgba(0,0,0,.28);
+}
+
+.app-icon svg{
+    width:100%;
+    height:100%;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.nav{
+    max-width:1180px;
+    margin:26px auto 12px;
+    padding:0 20px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.nav a{
+    color:#fff;
+    text-decoration:none;
+    background:#111016;
+    border:1px solid #3a333c;
+    border-radius:999px;
+    padding:8px 16px;
+    font-size:15px;
+    transition:.2s ease;
+}
+
+.nav a:hover,
+.nav a.active{
+    background:var(--pink);
+    border-color:var(--pink);
+}
+
+/* ---------- PAGE ---------- */
+
+.page{
+    width:min(940px,calc(100% - 30px));
+    margin:28px auto 50px;
+}
+
+.intro{
+    background:
+        linear-gradient(145deg,rgba(255,0,128,.10),rgba(255,0,128,.025)),
+        var(--surface);
+    border:1px solid var(--border);
+    border-radius:24px;
+    padding:28px 32px;
+    margin-bottom:18px;
+}
+
+.intro .effective{
+    display:inline-block;
+    color:#fff;
+    background:linear-gradient(90deg,var(--pink-dark),var(--pink));
+    border-radius:999px;
+    padding:6px 13px;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:14px;
+}
+
+.intro p{
+    margin:0;
+    color:var(--soft);
+    font-size:16px;
+}
+
+/* ---------- CONTENT CARDS ---------- */
+
+.section{
+    background:linear-gradient(145deg,#120c13,#0d090e);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:28px 32px;
+    margin:18px 0;
+    box-shadow:0 8px 30px rgba(0,0,0,.20);
+}
+
+.section h2{
+    margin:0 0 14px;
+    color:var(--pink);
+    font-size:23px;
+    line-height:1.3;
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.section h2::before{
+    content:"";
+    width:5px;
+    height:24px;
+    border-radius:5px;
+    background:linear-gradient(var(--pink),var(--pink-dark));
+    flex:0 0 5px;
+}
+
+.section h3{
+    margin:20px 0 8px;
+    color:#fff;
+    font-size:18px;
+}
+
+.section p{
+    margin:0 0 14px;
+    color:#e7e1e8;
+    font-size:16px;
+}
+
+.section p:last-child{
+    margin-bottom:0;
+}
+
+.section ul{
+    margin:8px 0 14px;
+    padding-left:24px;
+    color:#e7e1e8;
+}
+
+.section li{
+    margin:5px 0;
+}
+
+.section strong{
+    color:#fff;
+}
+
+.section a{
+    color:var(--pink-light);
+    word-break:break-word;
+}
+
+.email{
+    display:inline-block;
+    color:#fff!important;
+    background:linear-gradient(90deg,var(--pink-dark),var(--pink));
+    padding:10px 17px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:700;
+}
+
+/* ---------- TABLE OF CONTENTS ---------- */
+
+.toc{
+    background:#0d090e;
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:24px 28px;
+    margin-bottom:18px;
+}
+
+.toc h2{
+    margin:0 0 12px;
+    color:#fff;
+    font-size:20px;
+}
+
+.toc-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px 20px;
+}
+
+.toc a{
+    color:var(--pink-light);
+    text-decoration:none;
+    padding:5px 0;
+}
+
+.toc a:hover{
+    color:#fff;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    text-align:center;
+    color:var(--muted);
+    padding:25px 20px 40px;
+    font-size:13px;
+}
+
+.back-top{
+    color:var(--pink-light);
+    text-decoration:none;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:650px){
+
+    .hero-inner{
+        min-height:205px;
+        padding:28px 20px;
+        gap:16px;
+    }
+
+    .hero h1{
+        font-size:32px;
+        letter-spacing:-.6px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .app-icon{
+        width:82px;
+        height:82px;
+        flex-basis:82px;
+        border-radius:20px;
+        padding:7px;
+    }
+
+    .nav{
+        margin-top:20px;
+        padding:0 10px;
+        gap:7px;
+    }
+
+    .nav a{
+        padding:7px 11px;
+        font-size:13px;
+    }
+
+    .page{
+        width:calc(100% - 20px);
+        margin-top:20px;
+    }
+
+    .intro,
+    .section{
+        padding:22px 19px;
+        border-radius:18px;
+    }
+
+    .intro p,
+    .section p,
+    .section li{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .section h2{
+        font-size:20px;
+    }
+
+    .toc{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .toc-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body id="top">
+
+<header class="hero">
+    <div class="hero-inner">
+        <div>
+            <h1>Privacy Policy</h1>
+            <p>Express Music Player</p>
+        </div>
+
+        <div class="app-icon" aria-label="Express Music Player icon">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="112" height="112" rx="25" fill="#fff"/>
+                <rect x="18" y="18" width="84" height="84" rx="19" fill="#17121a"/>
+                <circle cx="60" cy="60" r="30" fill="#ff0080"/>
+                <path d="M68 39v37.5c0 8-6.5 14.5-14.5 14.5S40 84.5 40 78s5.5-11 12.5-11c3.1 0 6 .9 8.3 2.7V47.5l25-7v12l-18 5V39z" fill="#fff"/>
+            </svg>
+        </div>
+    </div>
+</header>
+
+<nav class="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="privacy-policy.html" class="active">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+</nav>
+
+<main class="page">
+
+    <section class="intro">
+        <span class="effective">Effective Date: 10 August 2026</span>
+        <p>
+            Thank you for choosing <strong> Express Music Player</strong> ("the App", "we", "our", or "us"). 
+			Your privacy is important to us. This Privacy Policy explains what information 
+			the App may access, how that information is used, and how we protect your privacy.
+        </p>
+        <br>
+        <p>
+            Express Music Player is primarily designed as an <strong>offline music player</strong>. 
+			Our goal is to provide a simple and private music-listening experience 
+			without requiring users to create an account, provide personal information, 
+			or have an internet connection for its core music playback features.
+        </p>
+    </section>
+
+    <section class="toc">
+        <h2>Contents</h2>
+        <div class="toc-grid">
+            <a href="#collection">1. Information We Collect</a>
+            <a href="#media">2. Music and Media Files</a>
+            <a href="#storage">3. Storage and Media Permissions</a>
+            <a href="#audio">4. Audio and Media Access</a>
+            <a href="#notification">5. Notification Permission</a>
+            <a href="#device">6. Device Information</a>
+            <a href="#internet">7. Internet Connection</a>
+            <a href="#personal">8. Personal Information</a>
+            <a href="#use">9. How We Use Information</a>
+            <a href="#sharing">10. Data Sharing</a>
+            <a href="#thirdparty">11. Third-Party Services</a>
+            <a href="#ads">12. Advertising</a>
+            <a href="#security">13. Data Security</a>
+            <a href="#retention">14. Data Retention and Deletion</a>
+            <a href="#children">15. Children's Privacy</a>
+            <a href="#choices">16. Your Choices and Permissions</a>
+            <a href="#updates">17. Changes to This Privacy Policy</a>
+            <a href="#contact">18. How to Contact Us</a>
+            <a href="#final">19. Final Statement</a>
+        </div>
+    </section>
+
+    <section class="section" id="collection">
+        <h2>1. Information We Collect</h2>
+        <p>
+            Express Music Player does <strong>not require you to create an account
+            or log in</strong> to use its core features.
+        </p>
+        <p>We do not collect personal information through the App's core functionality such as:</p>
+        <ul>
+            <li>Your name</li>
+            <li>Email address</li>
+            <li>Phone number</li>
+            <li>Home address</li>
+            <li>Passwords</li>
+            <li>Contacts</li>
+            <li>Photos or personal documents</li>
+            <li>Payment card information</li>
+        </ul>
+    </section>
+
+    <section class="section" id="media">
+        <h2>2. Music and Media Files</h2>
+        <p>
+            Express Music Player is designed to play music and supported media files
+            stored <strong>locally on your device</strong>.
+        </p>
+        <p>When you grant the required media or storage permission, the App may access supported audio files to:</p>
+        <ul>
+            <li>Find available music</li>
+            <li>Display music information</li>
+            <li>Play audio files</li>
+            <li>Create and manage playlists or playback queues</li>
+            <li>Display album artwork where supported</li>
+            <li>Provide music-management features</li>
+        </ul>
+        <p>
+            Your music files remain on your device. <strong>Express Music Player
+            does not upload your music files to our servers or transmit your
+            personal media files to us.</strong>
+        </p>
+    </section>
+
+    <section class="section" id="storage">
+        <h2>3. Storage and Media Permissions</h2>
+        <p>
+            Depending on your Android version, Express Music Player 
+			may request permission to access music and media files 
+			stored on your device. This permission is required for 
+			the App to scan, identify, organize, and play supported music files.
+        </p>
+        <p>The App uses this permission only to provide its music-player and 
+		media-management features. Your music and media files remain on your 
+		device and are not uploaded to our servers or transmitted to us through 
+		the App's core offline functionality.
+		</p>
+        <p>
+            You can manage or revoke applicable permissions through your device's 
+			system settings. Please note that denying the required permission may 
+			prevent the App from finding or playing music stored on your device.
+        </p>
+    </section>
+
+    <section class="section" id="audio">
+        <h2>4. Audio and Media Access</h2>
+        <p>
+            Express Music Player may access information associated with locally
+            stored media files, such as:
+        </p>
+        <ul>
+            <li>Song title</li>
+            <li>Artist name</li>
+            <li>Album name</li>
+            <li>Duration</li>
+            <li>Album artwork, where available</li>
+            <li>File location or URI required for playback</li>
+            <li>Other standard media metadata</li>
+        </ul>
+        <p>
+            This information is used to provide music playback and library-management
+            functionality and does not need to be uploaded to an external server for
+            the core offline functionality.
+        </p>
+    </section>
+
+    <section class="section" id="notification">
+        <h2>5. Notification Permission</h2>
+        <p>
+            On Android versions where notification permission is required,
+            Express Music Player may request permission to display notifications.
+        </p>
+        <p>Notifications may be used for:</p>
+        <ul>
+            <li>Music playback controls</li>
+            <li>Showing the currently playing song</li>
+            <li>Playback-related information</li>
+            <li>Important application information</li>
+        </ul>
+        <p>
+            You can disable notification permission through your device's system settings.
+        </p>
+    </section>
+
+    <section class="section" id="device">
+        <h2>6. Device Information</h2>
+        <p>
+            Express Music Player's core offline functionality does not require the
+            collection of personally identifiable device information.
+        </p>
+        <p>
+            The Android operating system may provide certain technical information
+            to the App when necessary for normal operation, compatibility,
+            permissions, audio playback, or error handling. This may include Android
+            version, device compatibility information, App version, screen or system
+            configuration, and media framework information.
+        </p>
+        <p>We do not use this information to identify you personally.</p>
+    </section>
+
+    <section class="section" id="internet">
+        <h2>7. Internet Connection</h2>
+        <p>
+            Express Music Player is designed primarily as an <strong>offline music
+            player</strong>. The core music playback functionality does not require
+            an internet connection.
+        </p>
+        <p>
+            If future versions introduce features that require internet access,
+            this Privacy Policy may be updated accordingly.
+        </p>
+    </section>
+
+    <section class="section" id="personal">
+        <h2>8. Personal Information</h2>
+        <p>
+            We do not intentionally request or collect personal information through
+            the App's core offline functionality.
+        </p>
+        <p>
+            If you voluntarily contact us through email or another communication
+            method, we may receive the information that you choose to provide.
+            This information will be used to respond to your request, provide
+            support, or address your feedback.
+        </p>
+    </section>
+
+    <section class="section" id="use">
+        <h2>9. How We Use Information</h2>
+        <p>Any information accessed by Express Music Player is used only for legitimate application functionality, including:</p>
+        <ul>
+            <li>Providing music playback</li>
+            <li>Managing your local music library</li>
+            <li>Reading supported media metadata</li>
+            <li>Displaying album artwork</li>
+            <li>Maintaining playback functionality</li>
+            <li>Providing notifications</li>
+            <li>Improving application compatibility</li>
+            <li>Diagnosing technical problems when applicable</li>
+            <li>Responding to user feedback or support requests</li>
+        </ul>
+    </section>
+
+    <section class="section" id="sharing">
+        <h2>10. Data Sharing</h2>
+        <p>
+            We respect your privacy. Express Music Player does not sell, rent, or
+            trade your personal information.
+        </p>
+        <p>
+            Your locally stored music files and media information are not
+            intentionally shared with third parties through the App's core
+            offline functionality.
+        </p>
+    </section>
+
+    <section class="section" id="thirdparty">
+        <h2>11. Third-Party Services</h2>
+        <p>
+            The current core version of Express Music Player is designed to operate
+            as an offline music player.
+        </p>
+        <p>
+            We do not claim that any third-party analytics, advertising, or
+            cloud-storage service is used unless such a service is actually
+            integrated into the App.
+        </p>
+    </section>
+
+    <section class="section" id="ads">
+        <h2>12. Advertising</h2>
+        <p>
+            The core version of Express Music Player is designed without requiring
+            advertisements for its offline music-player functionality.
+        </p>
+        <p>
+            If advertising is introduced in a future version, this Privacy Policy
+            will be updated to explain the relevant advertising and data practices.
+        </p>
+    </section>
+
+    <section class="section" id="security">
+        <h2>13. Data Security</h2>
+        <p>
+            We take reasonable measures to protect the privacy of users.
+            Because Express Music Player is primarily an offline application,
+            much of the information used by the App remains directly on the
+            user's device.
+        </p>
+        <p>
+            However, no method of electronic storage or transmission can be
+            guaranteed to be completely secure. Users should also maintain
+            appropriate security on their devices.
+        </p>
+    </section>
+
+    <section class="section" id="retention">
+        <h2>14. Data Retention and Deletion</h2>
+        <p>
+            Express Music Player does not maintain a central account containing
+            your personal information.
+        </p>
+        <p>
+            Music files and other locally stored application data remain on your
+            device according to your device's storage and Android application settings.
+        </p>
+        <p>You can remove locally stored application data by:</p>
+        <ul>
+            <li>Deleting individual files through your device</li>
+            <li>Removing playlists or application data where applicable</li>
+            <li>Clearing the App's data through Android settings</li>
+            <li>Uninstalling the App</li>
+        </ul>
+        <p>
+            Once locally stored application data is deleted, it may not be
+            recoverable through the App.
+        </p>
+    </section>
+
+    <section class="section" id="children">
+        <h2>15. Children's Privacy</h2>
+        <p>
+            Express Music Player is designed as a general-purpose music-player application. 
+			The App does not require users to create an account or provide personal information 
+			to use its core offline music-player features..
+        </p>
+        <p>
+            The App does not collect personal information from children or other users through 
+			its core offline functionality. Music and media information accessed by the App 
+			remains on the user's device and is not transmitted to us.
+        </p>
+		<p>
+		We are committed to providing a privacy-respecting experience for all users.
+		</p>
+    </section>
+
+    <section class="section" id="choices">
+        <h2>16. Your Choices and Permissions</h2>
+        <p>
+            You remain in control of the permissions granted to Express Music Player.
+            Depending on your Android version, you can review or change permissions
+            through:
+        </p>
+        <p><strong>Settings → Apps → Express Music Player → Permissions</strong></p>
+        <p>
+            You may deny or revoke permissions where Android allows it. Please note
+            that certain permissions are necessary for specific features.
+        </p>
+    </section>
+
+    <section class="section" id="updates">
+        <h2>17. Changes to This Privacy Policy</h2>
+        <p>
+            We may update this Privacy Policy from time to time to reflect changes
+            to the App, new features, Android requirements, data practices, or
+            legal requirements.
+        </p>
+        <p>
+            When changes are made, the updated Privacy Policy will be published on
+            this page with a revised <strong>Effective Date</strong>.
+        </p>
+        <p>
+            We encourage users to review this page periodically.
+        </p>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>18. How to Contact Us</h2>
+        <p>
+            If you have any questions, concerns, suggestions, or requests regarding
+            this Privacy Policy or the privacy practices of Express Music Player,
+            please contact us:
+        </p>
+        <p>
+            <a class="email" href="mailto:kartick.ck2016@gmail.com">
+                kartick.ck2016@gmail.com
+            </a>
+        </p>
+    </section>
+
+    <section class="section" id="final">
+        <h2>19. Final Statement</h2>
+        <p>
+            Express Music Player is built with privacy and offline functionality
+            in mind. Our goal is to allow users to enjoy music stored on their own
+            devices without unnecessarily collecting personal information.
+        </p>
+        <p>
+            We are committed to maintaining transparency about the information
+            accessed by the App and updating this Privacy Policy whenever the
+            App's functionality or data practices materially change.
+        </p>
+        <p><strong>Thank you for using Express Music Player.</strong></p>
+        <p><a class="back-top" href="#top">↑ Back to top</a></p>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Express Music Player · Privacy Policy
+</footer>
+
+</body>
+</html>
