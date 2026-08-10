@@ -76,11 +76,16 @@ body{
     border-radius:28px;
     padding:10px;
     box-shadow:0 12px 35px rgba(0,0,0,.28);
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.app-icon svg{
+.app-icon img{
     width:100%;
     height:100%;
+    object-fit:contain;
+    border-radius:20px;
 }
 
 /* ---------- NAVIGATION ---------- */
@@ -348,14 +353,9 @@ footer{
             <p>Express Music Player</p>
         </div>
 
-        <div class="app-icon" aria-label="Express Music Player icon">
-            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="112" height="112" rx="25" fill="#fff"/>
-                <rect x="18" y="18" width="84" height="84" rx="19" fill="#17121a"/>
-                <circle cx="60" cy="60" r="30" fill="#ff0080"/>
-                <path d="M68 39v37.5c0 8-6.5 14.5-14.5 14.5S40 84.5 40 78s5.5-11 12.5-11c3.1 0 6 .9 8.3 2.7V47.5l25-7v12l-18 5V39z" fill="#fff"/>
-            </svg>
-        </div>
+        <div class="app-icon">
+    <img src="images/app-icon.png" alt="Express Music Player">
+</div>
     </div>
 </header>
 
