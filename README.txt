@@ -1,12 +1,16 @@
 EXPRESS MUSIC PLAYER — GITHUB PAGES
 
-1. Upload all files to the root of a PUBLIC GitHub repository.
-2. GitHub Settings > Pages > Deploy from a branch > main > / (root) > Save.
-3. Before publishing, replace YOUR_EMAIL@example.com in feedback.html.
-4. Review the Privacy Policy so it exactly matches the final app, permissions and any SDKs used.
-5. After Pages is live, use the resulting URL for the app's Help links.
+This version uses one unified design across Home, FAQ, Feedback,
+Privacy Policy and Terms of Use.
+
+IMPORTANT:
+- Keep the existing images/app-icon.png file in your GitHub repository.
+- Replace YOUR_EMAIL@example.com in feedback.html with the real support email.
+- Upload/replace the HTML files and style.css in the repository.
+- GitHub Pages can then serve all pages with the same theme.
 
 Pages:
+- index.html
 - faq.html
 - feedback.html
 - privacy-policy.html
